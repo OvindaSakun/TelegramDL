@@ -6,10 +6,10 @@ This repository contains two different approaches to bypass local bandwidth cons
 
 ## 📂 Included Notebooks
 
-### 1. `BotFather_SmartSplit.ipynb` (Recommended for Standard Accounts)
+### 1. `Telegram_DL_SmartSplitBot.ipynb` (Recommended for Standard Accounts)
 Uses a standard Telegram Bot API token. Since standard bots are restricted to a 50MB upload limit, this script uses `yt-dlp` to download the full video to Colab, and then leverages a smart FFmpeg subprocess to automatically slice the video into numbered chunks (e.g., "Part 1 of 4") that safely fit under 50MB before uploading them to your chat.
 
-### 2. `MTProto_Userbot.ipynb` (Recommended for Large Single Files)
+### 2. `Telegram_DL_MTProtoUserbot.ipynb` (Recommended for Large Single Files)
 Uses Pyrogram to log into a secondary Telegram account (acting as a Userbot). Because it operates as a standard user, it inherits Telegram's **2GB premium upload limit**, completely eliminating the need for FFmpeg splitting. 
 
 ---
